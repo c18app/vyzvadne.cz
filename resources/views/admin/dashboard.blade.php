@@ -12,11 +12,13 @@
         <tr>
             <th>Obsah</th>
             <th>Datum vytvoření</th>
+            <th>Vytvořil</th>
         </tr>
         @foreach($neschvalene_vyzvy as $item)
             <tr>
                 <td>{{ $item->content }}</td>
-                <td>{{ $user->created_at->format('d.m.Y H:i:s') }}</td>
+                <td>{{ $item->created_at->format('d.m.Y H:i:s') }}</td>
+                <td>{{ $item->vytvoril_jmeno() }}</td>
             </tr>
         @endforeach
     </table>
