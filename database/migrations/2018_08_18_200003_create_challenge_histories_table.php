@@ -18,7 +18,7 @@ class CreateChallengeHistoriesTable extends Migration
             $table->timestamps();
             $table->integer('user_id')->unsigned()->nullable();
             $table->integer('challenge_id')->unsigned()->nullable();
-            $table->enum('status', ['odlozeno', 'splneno', 'prijato']);
+            $table->enum('status', ['odlozeno', 'splneno']);
         });
     }
 

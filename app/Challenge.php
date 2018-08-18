@@ -51,8 +51,6 @@ class Challenge extends Model
                 $challenge = $this->find($actual->challenge_id);
             }
 
-            dump($challenge->id);
-
             return $challenge->content;
 
 

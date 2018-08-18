@@ -16,6 +16,7 @@ Route::view('ochrana-osobnich-udaju', 'ochrana-osobnich-udaju');
 Route::get('/', 'IndexController@homepage');
 Route::post('/', 'IndexController@newchallenge');
 Route::get('profil', 'userController@profil');
+Route::get('historie', 'userController@historie');
 Route::get('odlozit', 'userController@odlozit');
 Route::get('splneno', 'userController@splneno');
 Route::get('admin', 'AdminController@dashboard');
