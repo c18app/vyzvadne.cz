@@ -13,14 +13,17 @@
         výhody registrace:
     </div>
     <div>
-        nová výzva:
-        <form action="" method="post">
+        @if ($errors->any())
+            @else
+        <button type="button" class="btn btn-success" onclick="$(this).slideUp(); $('form').slideDown();">Chci přidat novou výzvu</button>
+        @endif
+        <form action="" method="post" style="@if ($errors->any()) @else display: none; @endif">
             {{ csrf_field() }}
             <div class="form-group">
-                <label for="content">Text výzvy:</label>
+                <label for="content" style="font-weight: bold;">Text výzvy:</label>
                 <textarea id="content" name="content" class="form-control">{{ old('content') }}</textarea>
             </div>
-            <button type="submit" class="btn">Přidat výzvu</button>
+            <button type="submit" class="btn btn-success">Přidat výzvu</button>
         </form>
     </div>
 @endsection
