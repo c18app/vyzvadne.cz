@@ -12,6 +12,8 @@
     <h3 class="bg-danger text-light" style="padding: 10px; border-radius: 10px;">{{ $vyzva }}</h3>
 
     @auth
+        <a href="/splneno" class="btn btn-success"><span class="fas fa-check"></span>&nbsp;Tuto výzvu jsem již splnil/a</a>
+        <a href="/odlozit" class="btn btn-dark"><span class="fas fa-times"></span>&nbsp;Tato výzva není pro mě, chci jinou</a>
     @endauth
 
     @guest
