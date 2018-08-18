@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\User;
+use App\ChallengeNoshow;
 use Illuminate\Support\Facades\Auth;
 
 class Challenge extends Model
@@ -27,7 +28,21 @@ class Challenge extends Model
             $actual = ChallengeActual::where('user_id', $user->id)->orderBy('id', 'desc')->first();
 
             if(!$actual) {
-                $challenge = $this->inRandomOrder()->first();
+                $not_id_challenge_id = ChallengeNoshow::where('user_id', $user->id)->get(['challenge_id'])->pluck('challenge_id');
+
+                $challenge = $this->whereNotIn('id', $not_id_challenge_id)->inRandomOrder()->first();
+
+                if(!$challenge) {
+                    ChallengeNoshow::where('user_id', $user->id)->where('odlozeno', true)->delete();
+                    $not_id_challenge_id = ChallengeNoshow::where('user_id', $user->id)->get(['challenge_id'])->pluck('challenge_id');
+                    $challenge = $this->whereNotIn('id', $not_id_challenge_id)->inRandomOrder()->first();
+                }
+
+                if(!$challenge) {
+                    ChallengeNoshow::where('user_id', $user->id)->delete();
+                    $not_id_challenge_id = ChallengeNoshow::where('user_id', $user->id)->get(['challenge_id'])->pluck('challenge_id');
+                    $challenge = $this->whereNotIn('id', $not_id_challenge_id)->inRandomOrder()->first();
+                }
                 $actual = new ChallengeActual();
                 $actual->user_id = $user->id;
                 $actual->challenge_id = $challenge->id;

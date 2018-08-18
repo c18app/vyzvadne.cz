@@ -18,6 +18,7 @@ class CreateChallengeNoshowsTable extends Migration
             $table->timestamps();
             $table->integer('user_id')->unsigned()->nullable();
             $table->integer('challenge_id')->unsigned()->nullable();
+            $table->boolean('odlozeno')->default(false);
         });
     }
 

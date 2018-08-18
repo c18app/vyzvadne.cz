@@ -31,7 +31,7 @@
     <div style="margin-top: 25px;">
         @if ($errors->any())
             @else
-        <button type="button" class="btn btn-success" onclick="$(this).slideUp(); $('form').slideDown();">Chci přidat novou výzvu</button>
+        <button type="button" class="btn btn-primary" onclick="$(this).slideUp(); $('form').slideDown();">Chci přidat novou výzvu</button>
         @endif
         <form action="" method="post" style="@if ($errors->any()) @else display: none; @endif">
             {{ csrf_field() }}
