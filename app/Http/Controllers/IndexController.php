@@ -29,6 +29,6 @@ class IndexController extends Controller
             $challenge->save();
         }
 
-        return redirect('/');
+        return redirect('/')->with('message', 'Výzva byla přijata a nyní čeká na schválení.');
     }
 }
