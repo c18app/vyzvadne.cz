@@ -13,3 +13,4 @@
 
 Auth::routes();
 Route::get('/', 'IndexController@homepage');
+Route::get('admin', 'AdminController@dashboard');
