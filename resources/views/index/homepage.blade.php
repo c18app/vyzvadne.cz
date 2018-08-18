@@ -42,4 +42,8 @@
             <button type="submit" class="btn btn-success">Přidat výzvu</button>
         </form>
     </div>
+
+    <div>
+        <div class="fb-group" data-href="https://www.facebook.com/groups/vyzvadne/" data-width="280" data-show-social-context="true" data-show-metadata="true"></div>
+    </div>
 @endsection
