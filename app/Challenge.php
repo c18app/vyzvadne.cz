@@ -18,4 +18,9 @@ class Challenge extends Model
 
         return '-';
     }
+
+    public function getChallenge()
+    {
+        return $this->inRandomOrder()->first()->content;
+    }
 }

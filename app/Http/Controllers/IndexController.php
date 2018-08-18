@@ -10,7 +10,8 @@ class IndexController extends Controller
 {
     public function homepage()
     {
-        return view('index.homepage', ['vyzev_celkem' => Challenge::where('approved', true)->count()]);
+        $vyzva = (new Challenge)->getChallenge();
+        return view('index.homepage', ['vyzva' => $vyzva, 'vyzev_celkem' => Challenge::where('approved', true)->count()]);
     }
 
     public function newchallenge(Request $request, Auth $auth)

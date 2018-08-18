@@ -3,11 +3,12 @@
 @section('content')
     <h1>Výzva dne</h1>
     <div>
-        celkem výzev ({{ $vyzev_celkem }})
+        Na webu je vloženo celkem {{ $vyzev_celkem }} výzev. Pokud máte nápad na novou výzvu, pak jí můžete přidat níže.
     </div>
-    <div>
+    <div style="margin-top: 25px; font-weight: bold;">
         vaše dnešní výzva:
     </div>
+    <h3>{{ $vyzva }}</h3>
     <div>
         výhody registrace:
     </div>
