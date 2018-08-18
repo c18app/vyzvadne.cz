@@ -20,4 +20,23 @@ class AdminController extends Controller
         $neschvalene_vyzvy = Challenge::where('approved', false)->orderBy('id', 'asc')->get();
         return view('admin.dashboard', ['users' => $users, 'neschvalene_vyzvy' => $neschvalene_vyzvy]);
     }
+
+    public function deleteChallenge($id)
+    {
+        if($challenge = Challenge::find($id)) {
+            $challenge->delete();
+        }
+
+        return redirect('/admin');
+    }
+
+    public function approveChallenge($id)
+    {
+        if($challenge = Challenge::find($id)) {
+            $challenge->approved = true;
+            $challenge->save();
+        }
+
+        return redirect('/admin');
+    }
 }

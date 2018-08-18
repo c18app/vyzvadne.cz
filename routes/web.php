@@ -15,3 +15,5 @@ Auth::routes();
 Route::get('/', 'IndexController@homepage');
 Route::post('/', 'IndexController@newchallenge');
 Route::get('admin', 'AdminController@dashboard');
+Route::get('admin/{id}/delete', 'AdminController@deleteChallenge');
+Route::get('admin/{id}/approve', 'AdminController@approveChallenge');

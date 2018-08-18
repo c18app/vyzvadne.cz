@@ -13,12 +13,18 @@
             <th>Obsah</th>
             <th>Datum vytvoření</th>
             <th>Vytvořil</th>
+            <th>&nbsp;</th>
         </tr>
         @foreach($neschvalene_vyzvy as $item)
             <tr>
                 <td>{{ $item->content }}</td>
                 <td>{{ $item->created_at->format('d.m.Y H:i:s') }}</td>
                 <td>{{ $item->vytvoril_jmeno() }}</td>
+                <td>
+                    <a href="javascript:void(0);" data-href="/admin/{{ $item->id }}/delete" onclick="checkSubmit($(this), 'Skutečně si přejete tuto výzvu odstranit?')"><span class="fas fa-times text-danger"></span></a>
+                    &nbsp;
+                    <a href="javascript:void(0);" data-href="/admin/{{ $item->id }}/approve" onclick="checkSubmit($(this), 'Skutečně si přejete tuto výzvu potvrdit?')"><span class="fas fa-check text-success"></span></a>
+                </td>
             </tr>
         @endforeach
     </table>
@@ -40,4 +46,15 @@
             </tr>
         @endforeach
     </table>
+
+    <script>
+        function checkSubmit(e, text) {
+            if(confirm(text)) {
+                e.attr('href', e.data('href'));
+                return true;
+            }
+
+            return false;
+        }
+    </script>
 @endsection
