@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://www.vyzvadne.cz/">
+    <meta property="og:url" content="http://{{ $_SERVER['HTTP_HOST'] }}">
     <meta property="og:title" content="Výzva dne">
     <meta property="og:image" content="http://www.vyzvadne.cz/img/vyzva001.jpg">
     <meta property="og:description" content="Skupinu na FB i webovou stránku jsem vytvořil pro všechny, kdo mají rádi výzvy. Na webu se můžete inspirovat a přidat se ke skupině lidí, která se nebojí výzev. Stránka právě vznikla a moc výzev tam není, můžete sami přidávat nové výzvy (a to i anonymně). Věřím, že každé překročení svých hranic nás posune kousek dál. Rady, návody, Vaše příběhy a jiné informace můžete vkládat do skupiny na FB. Stále váháte? Přijměte výzvu a zapojte se :)">
