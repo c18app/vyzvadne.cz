@@ -7,7 +7,7 @@
     </div>
     <div class="text-danger">web je nově spuštěn 19. srpna 2018 a není zde ještě dostatek výzev, takže se budou často opakovat. Připojte se a přidejte jiné, pro přidání výzvy se <strong>nemusíte registrovat</strong> a výzvu můžete <strong>přidat anonymně</strong>.</div>
     <div style="margin-top: 25px; font-weight: bold;">
-        vaše dnešní výzva:
+        vaše aktuální výzva:
     </div>
     <h3 class="bg-danger text-light" style="padding: 10px; border-radius: 10px;">{{ $vyzva }}</h3>
 
