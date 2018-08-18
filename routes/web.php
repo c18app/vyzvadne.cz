@@ -15,6 +15,7 @@ Auth::routes();
 Route::view('ochrana-osobnich-udaju', 'ochrana-osobnich-udaju');
 Route::get('/', 'IndexController@homepage');
 Route::post('/', 'IndexController@newchallenge');
+Route::get('profil', 'userController@profil');
 Route::get('admin', 'AdminController@dashboard');
 Route::get('admin/{id}/delete', 'AdminController@deleteChallenge');
 Route::get('admin/{id}/approve', 'AdminController@approveChallenge');
