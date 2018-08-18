@@ -12,6 +12,7 @@
 */
 
 Auth::routes();
+Route::view('ochrana-osobnich-udaju', 'ochrana-osobnich-udaju');
 Route::get('/', 'IndexController@homepage');
 Route::post('/', 'IndexController@newchallenge');
 Route::get('admin', 'AdminController@dashboard');
