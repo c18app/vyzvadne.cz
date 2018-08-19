@@ -135,35 +135,14 @@
         $('.eu-cookies').slideUp();
     }
 </script>
-<div class="eu-cookies">
-    <div style="width: 950px; margin: 0 auto; text-align: left;">
-        <button type="button" onclick="euCookiesButtonOk();">Souhlasím</button>
+<div class="eu-cookies container-fluid fixed-bottom bg-dark text-light p-2">
+    <div class="container">
+        <button type="button" class="btn btn-primary float-right" onclick="euCookiesButtonOk();">Souhlasím</button>
         Tento web používá k poskytování služeb a analýze návštěvnosti soubory cookie. Používáním tohoto webu s tím souhlasíte.
         <a href="https://www.google.com/policies/technologies/cookies/" target="_blank">Další informace</a>
     </div>
 </div>
 <noscript><style>.eu-cookies { display:none }</style></noscript>
-<style>
-    .eu-cookies {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        color: white;
-        background-color: #696969;
-        z-index: 1000;
-        padding: 15px 0;
-        line-height: 200%;
-    }
-
-    .eu-cookies button {
-        background: #2cafe3;
-        color: white;
-        border: none;
-        padding: 5px 10px;
-        float: right;
-    }
-</style>
 <?php } ?>
 
 </body>
