@@ -53,9 +53,9 @@
         <div class="fb-like" data-href="http://www.vyzvadne.cz/" data-layout="button_count" data-action="like"
              data-size="small" data-show-faces="true" data-share="true"></div>
     </div>
-    
+
     <div class="text-right" style="margin-top: 25px;">
-        <div class="fb-group" data-href="https://www.facebook.com/groups/programovaniwebu/" data-width="280"
+        <div class="fb-group" data-href="https://www.facebook.com/groups/vyzvadne/" data-width="280"
              data-show-social-context="true" data-show-metadata="false"></div>
     </div>
 @endsection
