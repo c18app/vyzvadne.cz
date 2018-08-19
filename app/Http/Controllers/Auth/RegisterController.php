@@ -52,6 +52,14 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'accept_ou' => 'accepted',
+        ], [
+            'name.required' => 'Pole jméno je povinné.',
+            'email.required' => 'Pole email je povinné.',
+            'password.required' => 'Pole heslo je povinné.',
+            'password.min' => 'Pole heslo musí mít alespoň :min znaků.',
+            'password.confirmed' => 'Kontrola hesla nesouhlasí.',
+            'accept_ou.accepted' => 'Musíte souhlasit se zpracováním osobních údajů.',
         ]);
     }
 
