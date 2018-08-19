@@ -49,6 +49,13 @@
         </form>
     </div>
 
+    <div style="margin-top: 25px;">
+        Skupinu na FB i webovou stránku jsem vytvořil pro všechny, kdo mají rádi výzvy. Na webu se můžete inspirovat a přidat se ke skupině lidí, která se nebojí výzev. Stránka právě vznikla a moc výzev zde není, můžete sami přidávat nové výzvy (a to i anonymně).<br>
+        Věřím, že <strong>každé překročení svých hranic nás posune kousek dál</strong>.<br>
+        Rady, návody, Vaše příběhy a jiné informace můžete vkládat do skupiny na FB.<br>
+        Stále váháte? Přijměte výzvu a zapojte se :)
+    </div>
+
     <div class="text-right" style="margin-top: 25px;">
         <div class="fb-like" data-href="http://www.vyzvadne.cz/" data-layout="button_count" data-action="like"
              data-size="small" data-show-faces="true" data-share="true"></div>
