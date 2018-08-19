@@ -5,7 +5,10 @@
     <div>
         Na webu je vloženo celkem {{ $vyzev_celkem }} výzev. Pokud máte nápad na novou výzvu, pak jí můžete přidat níže.
     </div>
-    <div class="text-danger">web je nově spuštěn 19. srpna 2018 a není zde ještě dostatek výzev, takže se budou často opakovat. Připojte se a přidejte jiné, pro přidání výzvy se <strong>nemusíte registrovat</strong> a výzvu můžete <strong>přidat anonymně</strong>.</div>
+    <div class="text-danger">web je nově spuštěn 19. srpna 2018 a není zde ještě dostatek výzev, takže se budou často
+        opakovat. Připojte se a přidejte jiné, pro přidání výzvy se <strong>nemusíte registrovat</strong> a výzvu můžete
+        <strong>přidat anonymně</strong>.
+    </div>
     <div style="margin-top: 25px; font-weight: bold;">
         vaše aktuální výzva:
     </div>
@@ -13,11 +16,12 @@
 
     @auth
         <a href="/splneno" class="btn btn-success"><span class="fas fa-check"></span>&nbsp;Tuto výzvu jsem již splnil/a</a>
-        <a href="/odlozit" class="btn btn-dark"><span class="fas fa-times"></span>&nbsp;Tato výzva není pro mě, chci jinou</a>
+        <a href="/odlozit" class="btn btn-dark"><span class="fas fa-times"></span>&nbsp;Tato výzva není pro mě, chci
+            jinou</a>
     @endauth
 
     @guest
-        <a href="/" class="btn btn-danger"><span class="fas fa-times"></span>&nbsp;Tato výzva není pro mě, chci jinou</a>
+        <a href="/" class="btn btn-dark"><span class="fas fa-times"></span>&nbsp;Tato výzva není pro mě, chci jinou</a>
     @endguest
 
     <div style="margin-top: 25px;">
@@ -30,8 +34,10 @@
     </div>
     <div style="margin-top: 25px;">
         @if ($errors->any())
-            @else
-        <button type="button" class="btn btn-primary" onclick="$(this).slideUp(); $('form').slideDown();">Chci přidat novou výzvu</button>
+        @else
+            <button type="button" class="btn btn-primary" onclick="$(this).slideUp(); $('form').slideDown();">Chci
+                přidat novou výzvu
+            </button>
         @endif
         <form action="" method="post" style="@if ($errors->any()) @else display: none; @endif">
             {{ csrf_field() }}
@@ -43,10 +49,13 @@
         </form>
     </div>
 
-    <div>
-        <div class="fb-group" data-href="https://www.facebook.com/groups/vyzvadne/" data-width="280" data-show-social-context="true" data-show-metadata="false"></div>
+    <div style="margin-top: 25px;">
+        <div class="fb-group" data-href="https://www.facebook.com/groups/programovaniwebu/" data-width="280"
+             data-show-social-context="true" data-show-metadata="false"></div>
     </div>
-    <div>
-        <div class="fb-like" data-href="http://www.vyzvadne.cz/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+    
+    <div style="margin-top: 25px;">
+        <div class="fb-like" data-href="http://www.vyzvadne.cz/" data-layout="button_count" data-action="like"
+             data-size="small" data-show-faces="true" data-share="true"></div>
     </div>
 @endsection
